@@ -1,0 +1,130 @@
+@import url('./reset.css');
+@import url('./base.css');
+
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+}
+.header {
+  padding: 36px;
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.form-input {
+  width: 272px;
+  height: 40px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+.submit-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+/**Create gallery**/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.gallery-item {
+  width: 360px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+  box-sizing: border-box;
+}
+.gallery-img {
+  display: block;
+  width: 100%;
+  height: 152px;
+  object-fit: cover;
+}
+.total-container {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.text-container {
+  max-width: 74px;
+}
+.gallery-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.gallery-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+/**loader**/
+.loader {
+  width: 48px;
+  height: 48px;
+  border-width: 3px;
+  border-style: dashed solid solid dotted;
+  border-color: #4e75ff #4e75ff transparent #4e75ff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 20px;
+  top: 31px;
+  border: 10px solid transparent;
+  border-right-color: #4e75ff;
+  transform: rotate(-40deg);
+}
+.loader.hide {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
