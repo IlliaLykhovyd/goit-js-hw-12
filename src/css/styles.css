@@ -42,6 +42,11 @@
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+  transition: background 0.2s ease-in;
+}
+.submit-btn:hover,
+.submit-btn:focus {
+  background: #6c8cff;
 }
 /**Create gallery**/
 .gallery {
@@ -127,4 +132,31 @@
   100% {
     transform: rotate(360deg);
   }
+}
+/**loadmore-btn**/
+.loadmore-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 125px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 40px;
+  transition: background 0.2s ease-in;
+}
+.loadmore-btn:hover,
+.loadmore-btn:focus {
+  background: #6c8cff;
+}
+.loadmore-btn.hide {
+  display: none;
 }

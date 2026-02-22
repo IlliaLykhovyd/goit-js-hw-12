@@ -27,7 +27,7 @@ function createGallery(images) {
         </li>`
     )
     .join('');
-  gallery.innerHTML = markup;
+  gallery.insertAdjacentHTML('beforeend', markup);
   lightbox.refresh();
 }
 
@@ -45,4 +45,20 @@ function hideLoader() {
   const loader = document.querySelector('.loader');
   loader.classList.add('hide');
 }
-export { createGallery, clearGallery, showLoader, hideLoader };
+
+function showLoadMoreButton() {
+  const loadMore = document.querySelector('.loadmore-btn');
+  loadMore.classList.remove('hide');
+}
+function hideLoadMoreButton() {
+  const loadMore = document.querySelector('.loadmore-btn');
+  loadMore.classList.add('hide');
+}
+export {
+  createGallery,
+  clearGallery,
+  showLoader,
+  hideLoader,
+  showLoadMoreButton,
+  hideLoadMoreButton,
+};
