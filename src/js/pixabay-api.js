@@ -6,11 +6,11 @@ async function getImagesByQuery(query, page = 1) {
       q: query,
       image_type: 'photo',
       orientation: 'horizontal',
-      safesearch: 'true',
+      safesearch: true,
       page: page,
       per_page: 15,
     },
-  }).then(response => response.data);
-  return response;
+  });
+  return response.data;
 }
 export { getImagesByQuery };
